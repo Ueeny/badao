@@ -1195,13 +1195,12 @@ h3 {
   margin-top: 493px;
   margin-left: 239px;
   border: 2px solid #FFFFFF;
-  border-radius: 200px;
-  padding: 10px 10px 10px 10px;
+  border-radius: 50%;
+  padding: 10px;
   z-index: 1;
 }
 .about-school__item--z-index {
   position: absolute;
-  z-index: 0;
 }
 .about-school__button {
   margin-top: 80px;
@@ -1216,6 +1215,19 @@ h3 {
   font-family: Ubuntu, sans-serif;
   font-size: 18px;
   font-weight: 500;
+  position: relative;
+}
+.about-school__button:after {
+  content: '';
+  width: 134px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  right: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0;
+  bottom: 0;
 }
 /* #m1300 */
 /* #m1200 */
@@ -1229,11 +1241,15 @@ h3 {
 /* #m400 */
 /* #m300 */
 /* ---------------- preview ---------------- */
+.preview {
+  position: relative;
+}
 .preview__img {
   position: absolute;
-  left: 615px;
-  top: 140px;
-  z-index: 0;
+  bottom: 0;
+  width: auto;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .preview__title {
   display: flex;
