@@ -1313,6 +1313,9 @@ h3 {
 /* #m400 */
 /* #m300 */
 /* ---------------- trainer ---------------- */
+.trainer {
+  margin-top: 333px;
+}
 .trainer__title {
   font-family: Ubuntu, sans-serif;
   font-size: 72px;
@@ -1320,19 +1323,56 @@ h3 {
 }
 .trainer__block {
   display: flex;
+}
+.trainer__column--1 {
   margin-top: 100px;
+  position: relative;
 }
-.trainer__item {
-  z-index: 0;
-}
-.trainer__item--padding-left {
-  padding-left: 30px;
-}
-.trainer__text {
+.trainer__column--1 .trainer__text {
+  position: absolute;
+  top: 503px;
   font-family: Ubuntu, sans-serif;
   font-size: 64px;
   font-weight: 700;
-  z-index: 1;
+}
+.trainer__column--1 .trainer__item {
+  display: inline;
+}
+.trainer__column--1 .trainer__item--white-border {
+  color: black;
+  border: 2px solid #FFFFFF;
+}
+.trainer__column--2 {
+  display: flex;
+  width: 100%;
+  margin-top: 100px;
+  position: relative;
+  flex-direction: column;
+}
+.trainer__column--2 .trainer__text {
+  position: absolute;
+  top: 402px;
+  left: 30px;
+  font-family: Ubuntu, sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+}
+.trainer__column--2 .trainer__item {
+  display: inline;
+}
+.trainer__column--2 .trainer__item--white-border {
+  color: black;
+  border: 2px solid #FFFFFF;
+}
+.trainer__column--2 .trainer__img {
+  padding-left: 30px;
+}
+.trainer__info-text {
+  margin-left: 30px;
+  margin-top: 50px;
+  font-family: Ubuntu, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
 }
 /* #m1300 */
 /* #m1200 */

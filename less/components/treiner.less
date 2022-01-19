@@ -1,31 +1,80 @@
 /* ---------------- trainer ---------------- */
 
 .trainer {
+  margin-top: 333px;
 
   &__title {
-    font-family: Ubuntu,sans-serif;
+    font-family: Ubuntu, sans-serif;
     font-size: 72px;
     font-weight: 700;
   }
 
   &__block {
     display: flex;
-    margin-top: 100px;
   }
 
-  &__item {
-    z-index: 0;
+  &__column--1 {
+    margin-top: 100px;
+    position: relative;
 
-    &--padding-left {
+    .trainer__text {
+      position: absolute;
+      top: 503px;
+      font-family: Ubuntu,sans-serif;
+      font-size: 64px;
+      font-weight: 700;
+    }
+
+    .trainer__item {
+      display: inline;
+
+      &--white-border {
+        color: black;
+        border: 2px solid #FFFFFF;
+      }
+
+    }
+
+  }
+
+  &__column--2 {
+    display: flex;
+    width: 100%;
+    margin-top: 100px;
+    position: relative;
+    flex-direction: column;
+
+    .trainer__text {
+      position: absolute;
+      top: 402px;
+      left: 30px;
+      font-family: Ubuntu, sans-serif;
+      font-size: 64px;
+      font-weight: 700;
+    }
+
+    .trainer__item {
+      display: inline;
+
+      &--white-border {
+        color: black;
+        border: 2px solid #FFFFFF;
+      }
+    }
+
+    .trainer__img {
       padding-left: 30px;
     }
   }
 
-  &__text {
+  &__info-text {
+    margin-left: 30px;
+    margin-top: 50px;
+
     font-family: Ubuntu,sans-serif;
-    font-size: 64px;
-    font-weight: 700;
-    z-index: 1;
+    font-size: 18px;
+    font-weight: 500;
+
 
   }
 
