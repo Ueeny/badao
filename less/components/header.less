@@ -1,6 +1,7 @@
 /* ---------------- Header ---------------- */
 .header__columns {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -75,8 +76,14 @@
 }
 
 /* #m900 */
-@media (max-width: 989px) {
+@media (max-width: 900px) {
 
+  .header {
+    
+    &__column--2, &__column--3 {
+      display: none;
+    }
+  }
 }
 
 /* #m800 */

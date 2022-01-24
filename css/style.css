@@ -755,6 +755,7 @@ h3 {
 /* ---------------- Header ---------------- */
 .header__columns {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .header__location {
@@ -803,6 +804,12 @@ h3 {
 /* #m1200 */
 /* #m1100 */
 /* #m900 */
+@media (max-width: 900px) {
+  .header__column--2,
+  .header__column--3 {
+    display: none;
+  }
+}
 /* #m800 */
 /* #m700 */
 /* #m600 */
@@ -918,6 +925,62 @@ h3 {
   }
 }
 /* ---------------- Mobile button ---------------- */
+.mobile-button {
+  display: none;
+}
+.mobile-button__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.mobile-button__button {
+  display: flex;
+  width: 18px;
+  height: 1px;
+  position: relative;
+  background: #fff;
+  transition: all 0.3s ease-out;
+}
+.mobile-button__button:after,
+.mobile-button__button:before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  right: 0;
+  transition: all 0.3s ease-out;
+}
+.mobile-button__button:before {
+  top: -10px;
+}
+.mobile-button__button:after {
+  bottom: -10px;
+}
+.mobile-button.active .mobile-button__button {
+  background: transparent;
+}
+.mobile-button.active .mobile-button__button:after,
+.mobile-button.active .mobile-button__button:before {
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+.mobile-button.active .mobile-button__button:after {
+  transform: rotate(45deg);
+}
+.mobile-button.active .mobile-button__button:before {
+  transform: rotate(-45deg);
+}
+@media (max-width: 900px) {
+  .mobile-button {
+    display: flex;
+  }
+}
 /* ---------------- Paginator ---------------- */
 .paginator {
   display: flex;
@@ -1333,6 +1396,33 @@ h3 {
   font-size: 64px;
   font-weight: 700;
   z-index: 1;
+}
+/* #m1300 */
+/* #m1200 */
+/* #m1100 */
+/* #m900 */
+/* #m800 */
+/* #m700 */
+/* #m600 */
+/* #m500 */
+/* #m400 */
+/* #m400 */
+/* #m300 */
+/* ---------------- Dropmenu ---------------- */
+.dropmenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  padding: 20px;
+  border-radius: 20px;
+}
+.mobile-button.active .dropmenu {
+  display: flex;
+  width: 320px;
+  background: #e0e0e0;
+  right: 0;
+  top: 130px;
+  z-index: 100;
 }
 /* #m1300 */
 /* #m1200 */

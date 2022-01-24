@@ -1,8 +1,69 @@
 /* ---------------- Mobile button ---------------- */
 
+.mobile-button {
 
-@media (max-width: 989px) {
+  display: none;
 
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &__button {
+    display: flex;
+    width: 18px;
+    height: 1px;
+
+    position: relative;
+    background: #fff;
+    // ease, ease-in, ease-out, ease-in-out, linear
+    transition: all 0.3s ease-out;
+
+    &:after, &:before {
+      content: '';
+
+      width: 24px;
+      height: 1px;
+
+      background: #fff;
+      position: absolute;
+      right: 0;
+      transition: all 0.3s ease-out;
+    }
+
+    &:before{
+      top: -10px;
+    }
+
+    &:after {
+      bottom: -10px;
+    }
+  }
+
+  &.active &__button {
+    background: transparent;
+
+    &:after, &:before {
+      .absolute-vertical-center2();
+      .absolute-center2();
+    }
+
+    &:after {
+     transform: rotate(45deg);
+    }
+    &:before {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+@media (max-width: 900px) {
+
+  .mobile-button {
+
+    display: flex;
+  }
 
 }
 

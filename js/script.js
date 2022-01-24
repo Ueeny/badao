@@ -1,16 +1,11 @@
 
 
-let dropmenu = document.getElementById('dropmenu')
-
-toggleClass(dropmenu)
-
-function toggleClass(element) {
-    element.addEventListener('click', () => {
-        element.classList.toggle('active')
-    })
-}
 document.addEventListener('DOMContentLoaded', onLoad);
 
 function onLoad() {
+    let button = document.getElementById('mobile-button')
 
+    button.addEventListener('click', (event) => {
+        button.classList.toggle('active')
+    });
 }
